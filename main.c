@@ -72,6 +72,7 @@ int	main(int argc, char **argv)
 	t_stack	stack_a;
 	t_stack	stack_b;
 	int		strategy;
+
 	if (argc < 2)
 		return (0);
 
@@ -86,7 +87,7 @@ int	main(int argc, char **argv)
 		argv++;
 		argc--;
 	}
-	parse_input(argc, argv, &stack_a, &stack_b);
+	parse_input(argc, argv, &stack_a);
 	print_stack(&stack_a);
 
 	// DEBUG SECTION
@@ -100,6 +101,7 @@ int	main(int argc, char **argv)
 
 
 // TODO
-// parser
+// parser - done
 // INIT STACKS
+// MOVES
 // algoritmhs

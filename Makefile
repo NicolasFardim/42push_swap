@@ -1,12 +1,12 @@
 NAME	= push_swap
 
-FLAGS	= -Wall -Werror -Wextra -fsanitize=address -g
+FLAGS	= -Wall -Werror -Wextra  -g
 LFLAGS	= -I libft
 CC		= cc
 
 LIBFT	= libft/libft.a
 
-SRCS	=	main.c parser.c
+SRCS	=	main.c parser.c utils.c
 
 OBJS	= $(SRCS:.c=.o)
 

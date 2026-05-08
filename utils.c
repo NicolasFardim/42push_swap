@@ -1,11 +1,8 @@
 #include "push_swap.h"
 
-void	error_exit(t_stack *stack_a, t_stack *stack_b) // em caso de falhar seguimos as regras que e dar free em tudo e imprimir erro com new line
+// em caso de falhar seguimos as regras que e dar free em tudo e imprimir erro com new line
+void	error_exit()
 {
-	if (stack_a) // so para verificar no caso da b se ja foi criado
-		free_stack(stack_a);
-	if (stack_b)
-		free_stack(stack_b);
 	ft_putstr_fd("Error\n", 2);
 	exit(1);
 }
@@ -31,16 +28,16 @@ void	free_stack(t_stack *stack)
 	stack->size = 0;
 }
 
-int	check_duplicates(t_stack *stack, int value) // n pode ter duplicados
+int	check_duplicates(t_stack *stack_a, int value) // n pode ter duplicados
 {
 	t_node	*current;
 	int		i;
 
-	if (!stack || stack->size == 0)
+	if (!stack_a || stack_a->size == 0)
 		return (0);
-	current = stack->top; // começa na primeira
+	current = stack_a->top; // começa na primeira
 	i = 0;
-	while (i < stack->size) //loop de posicao so pa verificar se tem algum igual
+	while (i < stack_a->size) //loop de posicao so pa verificar se tem algum igual
 	{
 		if (current->value == value)
 			return (1);

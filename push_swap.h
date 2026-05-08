@@ -20,11 +20,11 @@ typedef struct s_stack
 
 int	parse_flags(char **argv);
 
-void	parse_input(int argc, char **argv, t_stack *stack_a, t_stack *stack_b);
-void	parse_number(char *str, t_stack *stack_a, t_stack *stack_b);
-void	parse_split(char *arg, t_stack *stack_a, t_stack *stack_b);
-int		check_duplicates(t_stack *stack, int value);
-void	error_exit(t_stack *stack_a, t_stack *stack_b);
+void	parse_input(int argc, char **argv, t_stack *stack_a);
+int		parse_number(char *str, t_stack *stack_a);
+void	parse_split(char *arg, t_stack *stack_a);
+int		check_duplicates(t_stack *stack_a, int value);
+void	error_exit();
 void	free_stack(t_stack *stack);
 int		is_a_number(const char *input);
 
